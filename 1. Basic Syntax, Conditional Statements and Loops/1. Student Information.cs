@@ -8,6 +8,7 @@ namespace C_sharp_traingng
         {
             Console.Write("a");
             Console.Write("b");
+            Console.WriteLine("c");
         }
     }
 }

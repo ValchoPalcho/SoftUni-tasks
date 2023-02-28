@@ -1,2 +1,2 @@
 # SoftUni-tasks
-Fundamentals
+Fundamentals C#

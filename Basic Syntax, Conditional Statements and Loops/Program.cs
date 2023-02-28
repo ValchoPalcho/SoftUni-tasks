@@ -1,0 +1,17 @@
+﻿namespace _11._Multiplication_Table_2._0
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int integer = int.Parse(Console.ReadLine());
+            int secondInteger = int.Parse(Console.ReadLine());
+
+            do
+            {
+                Console.WriteLine($"{integer} X {secondInteger} = {integer * secondInteger}");
+                secondInteger++;
+            } while (secondInteger <= 10);
+        }
+    }
+}

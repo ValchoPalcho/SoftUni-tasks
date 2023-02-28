@@ -1,0 +1,49 @@
+﻿namespace _7._Theatre_Promotions
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string typeOfTheDay = Console.ReadLine();
+            int age = int.Parse(Console.ReadLine());
+            int price = 0;
+
+            if (0 <= age && age <= 18)
+            {
+                switch (typeOfTheDay)
+                {
+                    case "Weekday": price = 12; break;
+                    case "Weekend": price = 15; break;
+                    case "Holiday": price = 5; break;
+                }
+            }
+            else if (18 < age && age <= 64)
+            {
+                switch (typeOfTheDay)
+                {
+                    case "Weekday": price = 18; break;
+                    case "Weekend": price = 20; break;
+                    case "Holiday": price = 12; break;
+                }
+            }
+            else if (64 < age && age <= 122)
+            {
+                switch (typeOfTheDay)
+                {
+                    case "Weekday": price = 12; break;
+                    case "Weekend": price = 15; break;
+                    case "Holiday": price = 10; break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error!");
+            }
+
+            if (age >= 0 && age <= 122)
+            {
+                Console.WriteLine($"{price}$");
+            }
+        }
+    }
+}

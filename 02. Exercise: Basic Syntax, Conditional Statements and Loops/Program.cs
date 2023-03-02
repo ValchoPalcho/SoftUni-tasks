@@ -1,0 +1,117 @@
+﻿namespace _7._Vending_Machine
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string receivedMoney = Console.ReadLine();
+            double moneyCounter = 0;
+
+            while (receivedMoney != "Start")
+            {
+                double receivedMoney1 = double.Parse(receivedMoney);
+
+                if (receivedMoney1 == 0.1)
+                {
+                    moneyCounter += 0.1;
+                }
+                else if (receivedMoney1 == 0.2)
+                {
+                    moneyCounter += 0.2;
+                }
+                else if (receivedMoney1 == 0.5)
+                {
+                    moneyCounter += 0.5;
+                }
+                else if (receivedMoney1 == 1)
+                {
+                    moneyCounter += 1;
+                }
+                else if (receivedMoney1 == 2)
+                {
+                    moneyCounter += 2;
+                }
+                else
+                {
+                    Console.WriteLine($"Cannot accept {receivedMoney}");
+                }
+
+                receivedMoney = Console.ReadLine();
+
+            }
+
+            string foodToTake = Console.ReadLine();
+
+            while (foodToTake != "End")
+            {
+                if (foodToTake == "Nuts")
+                {
+                    if (moneyCounter >= 2)
+                    {
+                        moneyCounter -= 2;
+                        Console.WriteLine($"Purchased nuts");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry, not enough money");
+                    }
+                }
+                else if (foodToTake == "Water")
+                {
+                    if (moneyCounter >= 0.7)
+                    {
+                        moneyCounter -= 0.7;
+                        Console.WriteLine($"Purchased water");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry, not enough money");
+                    }
+                }
+                else if (foodToTake == "Crisps")
+                {
+                    if (moneyCounter >= 1.5)
+                    {
+                        moneyCounter -= 1.5;
+                        Console.WriteLine($"Purchased crisps");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry, not enough money");
+                    }
+                }
+                else if (foodToTake == "Soda")
+                {
+                    if (moneyCounter >= 0.8)
+                    {
+                        moneyCounter -= 0.8;
+                        Console.WriteLine($"Purchased soda");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry, not enough money");
+                    }
+                }
+                else if (foodToTake == "Coke")
+                {
+                    if (moneyCounter >= 1)
+                    {
+                        moneyCounter -= 1;
+                        Console.WriteLine($"Purchased coke");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry, not enough money");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid product");
+                }
+                foodToTake = Console.ReadLine();
+            }
+
+            Console.WriteLine($"Change: {moneyCounter:F2}");
+        }
+    }
+}

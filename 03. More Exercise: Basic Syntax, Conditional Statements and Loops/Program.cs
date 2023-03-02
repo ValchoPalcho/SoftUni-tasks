@@ -1,0 +1,114 @@
+﻿namespace _03._Gaming_Store
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double balance = double.Parse(Console.ReadLine());
+            string word = Console.ReadLine();
+            double spendMoney = 0;
+            double copyBalance = balance;
+
+            while (word != "Game Time")
+            {
+                if (balance > 0)
+                {
+                    if (word == "OutFall 4")
+                    {
+                        if (balance >= 39.99)
+                        {
+                            balance -= 39.99;
+                            spendMoney += 39.99;
+                            Console.WriteLine("Bought OutFall 4");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Too Expensive");
+                        }
+                    }
+                    else if (word == "CS: OG")
+                    {
+                        if (balance >= 15.99)
+                        {
+                            balance -= 15.99;
+                            spendMoney += 15.99;
+                            Console.WriteLine("Bought CS: OG");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Too Expensive");
+                        }
+                    }
+                    else if (word == "Zplinter Zell")
+                    {
+                        if (balance >= 19.99)
+                        {
+                            balance -= 19.99;
+                            spendMoney += 19.99;
+                            Console.WriteLine("Bought Zplinter Zell");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Too Expensive");
+                        }
+                    }
+                    else if (word == "Honored 2")
+                    {
+                        if (balance >= 59.99)
+                        {
+                            balance -= 59.99;
+                            spendMoney += 59.99;
+                            Console.WriteLine("Bought Honored 2");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Too Expensive");
+                        }
+                    }
+                    else if (word == "RoverWatch")
+                    {
+                        if (balance >= 29.99)
+                        {
+                            balance -= 29.99;
+                            spendMoney += 29.99;
+                            Console.WriteLine("Bought RoverWatch");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Too Expensive");
+                        }
+                    }
+                    else if (word == "RoverWatch Origins Edition")
+                    {
+                        if (balance >= 39.99)
+                        {
+                            balance -= 39.99;
+                            spendMoney += 39.99;
+                            Console.WriteLine("Bought RoverWatch Origins Edition");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Too Expensive");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not Found");
+                    }
+                }
+                if (balance == 0)
+                {
+                    Console.WriteLine("Out of money !");
+                    break;
+                }
+
+                word = Console.ReadLine();
+            }
+
+            if (word == "Game Time" && balance != 0)
+            {
+                Console.WriteLine($"Total spent: ${spendMoney:F2}. Remaining: ${copyBalance - spendMoney:F2}");
+            }
+        }
+    }
+}
